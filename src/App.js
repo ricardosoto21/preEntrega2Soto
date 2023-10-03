@@ -1,17 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css';
-
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
-    return (
-        <div className="App">
-            <NavBar />
-            <ItemListContainer greeting="¡Bienvenido a nuestra tienda!" />
-        </div>
-    );
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Switch>
+          <Route exact path="/" component={ItemListContainer} />
+          <Route path="/category/:id" component={ItemListContainer} />
+          <Route path="/item/:id" component={ItemDetailContainer} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
