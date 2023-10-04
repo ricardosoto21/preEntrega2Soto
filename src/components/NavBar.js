@@ -14,7 +14,15 @@ const NavBar = () => {
           <li className="nav-item">
             <Link className="nav-link" to="/category/categoria2">Categoría 2</Link>
           </li>
-          // Agrega más categorías según lo necesites
+          <li className="nav-item">
+            <Link className="nav-link" to="/category/categoria3">Categoría 3</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/category/categoria4">Categoría 4</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/category/categoria5">Categoría 5</Link>
+          </li>
         </ul>
       </div>
       <CartWidget />
