@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <NavBar />
-        <Routes>
+        <Routes basename="/preEntrega2Soto">
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
