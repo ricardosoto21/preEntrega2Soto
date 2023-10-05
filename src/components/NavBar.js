@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <Link className="navbar-brand" to="/">Nombre de la Tienda</Link>
+      <Link className="navbar-brand" to="/">Tecnologías Riki</Link>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
