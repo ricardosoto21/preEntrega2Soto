@@ -1,4 +1,3 @@
-// En ItemDetailContainer.js
 import React from 'react';
 
 const ItemDetailContainer = () => {

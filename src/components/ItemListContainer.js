@@ -15,18 +15,18 @@ const ItemListContainer = () => {
         { id: '4', name: 'Producto 4', description: 'Descripción del producto 4', price: 150, image: 'url-de-imagen', category: 'categoria4' },
         { id: '5', name: 'Producto 5', description: 'Descripción del producto 5', price: 150, image: 'url-de-imagen', category: 'categoria5' },
     ];
-
-    // Filtrar productos según la categoría
-    const filteredItems = mockItems.filter(item => item.category === categoryId);
-    setItems(filteredItems);
-  }, [categoryId]);
+    setItems(mockItems);
+  }, []);
 
   return (
     <div className="item-list">
-        {items.map(item => <Item key={item.id} item={item} />)}
+        {items.map(item => (
+            <Link key={item.id} to={`/item/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Item item={item} />
+            </Link>
+        ))}
     </div>
-  );
+);
 }
 
 export default ItemListContainer;
-
